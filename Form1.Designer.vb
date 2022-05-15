@@ -54,7 +54,7 @@ Partial Class Form1
         Me.SidePanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.SidePanel.Location = New System.Drawing.Point(0, 28)
         Me.SidePanel.Name = "SidePanel"
-        Me.SidePanel.Size = New System.Drawing.Size(170, 533)
+        Me.SidePanel.Size = New System.Drawing.Size(170, 672)
         Me.SidePanel.TabIndex = 0
         '
         'PanelButtons
@@ -168,14 +168,14 @@ Partial Class Form1
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.HeaderPanel.Location = New System.Drawing.Point(0, 0)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(909, 28)
+        Me.HeaderPanel.Size = New System.Drawing.Size(1100, 28)
         Me.HeaderPanel.TabIndex = 1
         '
         'Bclose
         '
         Me.Bclose.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Bclose.Image = CType(resources.GetObject("Bclose.Image"), System.Drawing.Image)
-        Me.Bclose.Location = New System.Drawing.Point(886, 6)
+        Me.Bclose.Location = New System.Drawing.Point(1077, 6)
         Me.Bclose.Name = "Bclose"
         Me.Bclose.Size = New System.Drawing.Size(16, 16)
         Me.Bclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -186,7 +186,7 @@ Partial Class Form1
         '
         Me.Bmin.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Bmin.Image = CType(resources.GetObject("Bmin.Image"), System.Drawing.Image)
-        Me.Bmin.Location = New System.Drawing.Point(822, 6)
+        Me.Bmin.Location = New System.Drawing.Point(1013, 6)
         Me.Bmin.Name = "Bmin"
         Me.Bmin.Size = New System.Drawing.Size(16, 16)
         Me.Bmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -197,7 +197,7 @@ Partial Class Form1
         '
         Me.Bmax.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Bmax.Image = CType(resources.GetObject("Bmax.Image"), System.Drawing.Image)
-        Me.Bmax.Location = New System.Drawing.Point(854, 6)
+        Me.Bmax.Location = New System.Drawing.Point(1045, 6)
         Me.Bmax.Name = "Bmax"
         Me.Bmax.Size = New System.Drawing.Size(16, 16)
         Me.Bmax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -209,14 +209,14 @@ Partial Class Form1
         Me.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContainer.Location = New System.Drawing.Point(170, 28)
         Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(739, 533)
+        Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
         Me.PanelContainer.TabIndex = 2
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(909, 561)
+        Me.ClientSize = New System.Drawing.Size(1100, 700)
         Me.Controls.Add(Me.PanelContainer)
         Me.Controls.Add(Me.SidePanel)
         Me.Controls.Add(Me.HeaderPanel)
