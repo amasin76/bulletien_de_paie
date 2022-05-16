@@ -93,8 +93,8 @@
                                 g.FillRectangle(New SolidBrush(ButtonBackColor), tabRect)
                                 Exit Select
                             Case Style.Line
-                                g.DrawLine(New Pen(LineBackColor, 3), 0, tabRect.Bottom, Me.Width, tabRect.Bottom)
-                                g.FillRectangle(New SolidBrush(LineForeColor), New Rectangle(tabRect.Left, tabRect.Bottom - 1, ItemSize.Width, 3))
+                                g.DrawLine(New Pen(LineBackColor, 5), 0, tabRect.Bottom, Me.Width, tabRect.Bottom)
+                                g.FillRectangle(New SolidBrush(LineForeColor), New Rectangle(tabRect.Left, tabRect.Bottom - 1, ItemSize.Width, 5))
                                 Exit Select
                         End Select
 
