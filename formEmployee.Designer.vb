@@ -22,6 +22,7 @@ Partial Class formEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MTabControl1 = New Bulletien_De_Paie.MTabControl()
         Me.TabAjoute = New System.Windows.Forms.TabPage()
         Me.PanelMain = New System.Windows.Forms.Panel()
@@ -59,38 +60,38 @@ Partial Class formEmployee
         Me.TabConsulter = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PanelGrid = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Cmat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cnpr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cfn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cadrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cvil = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ctel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cdem = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cnen = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PanelBoxes = New System.Windows.Forms.Panel()
-        Me.Znen_sr = New System.Windows.Forms.TextBox()
-        Me.Zdem_sr = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Ztel_sr = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Zvil_sr = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Zadrs_rs = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Zfn_sr = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Znpr_sr = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Zmat_sr = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.LrowsCount = New System.Windows.Forms.Label()
+        Me.BtableLast = New System.Windows.Forms.Button()
+        Me.BtableNext = New System.Windows.Forms.Button()
+        Me.BtableFirst = New System.Windows.Forms.Button()
+        Me.BtablePrev = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmployeedbDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.PanelBoxes = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Zsearch = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Bannuler_sr = New System.Windows.Forms.Button()
         Me.Brechercher = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.EmployeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.EmployeTableAdapter()
         Me.MTabControl1.SuspendLayout()
         Me.TabAjoute.SuspendLayout()
         Me.PanelMain.SuspendLayout()
@@ -100,6 +101,9 @@ Partial Class formEmployee
         Me.Panel3.SuspendLayout()
         Me.PanelGrid.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeedbDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBoxes.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -481,104 +485,191 @@ Partial Class formEmployee
         '
         'PanelGrid
         '
+        Me.PanelGrid.AutoScroll = True
+        Me.PanelGrid.Controls.Add(Me.Label13)
+        Me.PanelGrid.Controls.Add(Me.LrowsCount)
+        Me.PanelGrid.Controls.Add(Me.BtableLast)
+        Me.PanelGrid.Controls.Add(Me.BtableNext)
+        Me.PanelGrid.Controls.Add(Me.BtableFirst)
+        Me.PanelGrid.Controls.Add(Me.BtablePrev)
         Me.PanelGrid.Controls.Add(Me.DataGridView1)
         Me.PanelGrid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelGrid.Location = New System.Drawing.Point(0, 138)
+        Me.PanelGrid.Location = New System.Drawing.Point(0, 57)
         Me.PanelGrid.Name = "PanelGrid"
-        Me.PanelGrid.Size = New System.Drawing.Size(922, 343)
+        Me.PanelGrid.Size = New System.Drawing.Size(922, 424)
         Me.PanelGrid.TabIndex = 5
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label13.Location = New System.Drawing.Point(767, 311)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(80, 21)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Result(s) :"
+        '
+        'LrowsCount
+        '
+        Me.LrowsCount.AutoSize = True
+        Me.LrowsCount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LrowsCount.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.LrowsCount.Location = New System.Drawing.Point(860, 311)
+        Me.LrowsCount.Name = "LrowsCount"
+        Me.LrowsCount.Size = New System.Drawing.Size(0, 21)
+        Me.LrowsCount.TabIndex = 2
+        '
+        'BtableLast
+        '
+        Me.BtableLast.Location = New System.Drawing.Point(204, 305)
+        Me.BtableLast.Name = "BtableLast"
+        Me.BtableLast.Size = New System.Drawing.Size(52, 32)
+        Me.BtableLast.TabIndex = 1
+        Me.BtableLast.Text = ">>"
+        Me.BtableLast.UseVisualStyleBackColor = True
+        '
+        'BtableNext
+        '
+        Me.BtableNext.Location = New System.Drawing.Point(146, 305)
+        Me.BtableNext.Name = "BtableNext"
+        Me.BtableNext.Size = New System.Drawing.Size(52, 32)
+        Me.BtableNext.TabIndex = 1
+        Me.BtableNext.Text = ">"
+        Me.BtableNext.UseVisualStyleBackColor = True
+        '
+        'BtableFirst
+        '
+        Me.BtableFirst.Location = New System.Drawing.Point(30, 305)
+        Me.BtableFirst.Name = "BtableFirst"
+        Me.BtableFirst.Size = New System.Drawing.Size(52, 32)
+        Me.BtableFirst.TabIndex = 1
+        Me.BtableFirst.Text = "<<"
+        Me.BtableFirst.UseVisualStyleBackColor = True
+        '
+        'BtablePrev
+        '
+        Me.BtablePrev.Location = New System.Drawing.Point(88, 305)
+        Me.BtablePrev.Name = "BtablePrev"
+        Me.BtablePrev.Size = New System.Drawing.Size(52, 32)
+        Me.BtablePrev.TabIndex = 1
+        Me.BtablePrev.Text = "<"
+        Me.BtablePrev.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cmat, Me.Cnpr, Me.Cfn, Me.Cadrs, Me.Cvil, Me.Ctel, Me.Cdem, Me.Cnen})
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 14)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
+        Me.DataGridView1.DataSource = Me.EmployeBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(30, 20)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(853, 307)
-        Me.DataGridView1.TabIndex = 3
+        Me.DataGridView1.Size = New System.Drawing.Size(849, 279)
+        Me.DataGridView1.TabIndex = 0
         '
-        'Cmat
+        'DataGridViewTextBoxColumn1
         '
-        Me.Cmat.HeaderText = "Matricule"
-        Me.Cmat.Name = "Cmat"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Mat"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Mat"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 80
         '
-        'Cnpr
+        'DataGridViewTextBoxColumn2
         '
-        Me.Cnpr.HeaderText = "Nom"
-        Me.Cnpr.Name = "Cnpr"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Nom_Prenom"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nom_Prenom"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'Cfn
+        'DataGridViewTextBoxColumn3
         '
-        Me.Cfn.HeaderText = "Fonction"
-        Me.Cfn.Name = "Cfn"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Fonction"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Fonction"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'Cadrs
+        'DataGridViewTextBoxColumn4
         '
-        Me.Cadrs.HeaderText = "Adresse"
-        Me.Cadrs.Name = "Cadrs"
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Adresse"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Adresse"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'Cvil
+        'DataGridViewTextBoxColumn5
         '
-        Me.Cvil.HeaderText = "Ville"
-        Me.Cvil.Name = "Cvil"
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Ville"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Ville"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'Ctel
+        'DataGridViewTextBoxColumn6
         '
-        Me.Ctel.HeaderText = "Phone"
-        Me.Ctel.Name = "Ctel"
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Email"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Email"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Visible = False
         '
-        'Cdem
+        'DataGridViewTextBoxColumn7
         '
-        Me.Cdem.HeaderText = "DEM"
-        Me.Cdem.Name = "Cdem"
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Telephone"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Telephone"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'Cnen
+        'DataGridViewTextBoxColumn8
         '
-        Me.Cnen.HeaderText = "Enfants"
-        Me.Cnen.Name = "Cnen"
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "DEM"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "DEM"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Enfants"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Enfants"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.DataPropertyName = "Photo"
+        Me.DataGridViewImageColumn1.HeaderText = "Photo"
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "CV"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "CV"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "dateRec"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "dateRec"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Visible = False
+        '
+        'EmployeBindingSource
+        '
+        Me.EmployeBindingSource.DataMember = "Employe"
+        Me.EmployeBindingSource.DataSource = Me.EmployeedbDataSetBindingSource
+        '
+        'EmployeedbDataSetBindingSource
+        '
+        Me.EmployeedbDataSetBindingSource.DataSource = Me.Employee_dbDataSet
+        Me.EmployeedbDataSetBindingSource.Position = 0
+        '
+        'Employee_dbDataSet
+        '
+        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
+        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PanelBoxes
         '
-        Me.PanelBoxes.Controls.Add(Me.Znen_sr)
-        Me.PanelBoxes.Controls.Add(Me.Zdem_sr)
         Me.PanelBoxes.Controls.Add(Me.Label10)
-        Me.PanelBoxes.Controls.Add(Me.Ztel_sr)
-        Me.PanelBoxes.Controls.Add(Me.Label12)
-        Me.PanelBoxes.Controls.Add(Me.Zvil_sr)
-        Me.PanelBoxes.Controls.Add(Me.Label13)
-        Me.PanelBoxes.Controls.Add(Me.Zadrs_rs)
-        Me.PanelBoxes.Controls.Add(Me.Label14)
-        Me.PanelBoxes.Controls.Add(Me.Zfn_sr)
-        Me.PanelBoxes.Controls.Add(Me.Label15)
-        Me.PanelBoxes.Controls.Add(Me.Znpr_sr)
-        Me.PanelBoxes.Controls.Add(Me.Label16)
-        Me.PanelBoxes.Controls.Add(Me.Zmat_sr)
-        Me.PanelBoxes.Controls.Add(Me.Label17)
-        Me.PanelBoxes.Controls.Add(Me.Label18)
+        Me.PanelBoxes.Controls.Add(Me.Zsearch)
         Me.PanelBoxes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBoxes.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PanelBoxes.Location = New System.Drawing.Point(0, 0)
         Me.PanelBoxes.Name = "PanelBoxes"
-        Me.PanelBoxes.Size = New System.Drawing.Size(922, 138)
+        Me.PanelBoxes.Size = New System.Drawing.Size(922, 57)
         Me.PanelBoxes.TabIndex = 4
-        '
-        'Znen_sr
-        '
-        Me.Znen_sr.Location = New System.Drawing.Point(736, 47)
-        Me.Znen_sr.Name = "Znen_sr"
-        Me.Znen_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Znen_sr.TabIndex = 2
-        '
-        'Zdem_sr
-        '
-        Me.Zdem_sr.Location = New System.Drawing.Point(736, 12)
-        Me.Zdem_sr.Name = "Zdem_sr"
-        Me.Zdem_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Zdem_sr.TabIndex = 2
         '
         'Label10
         '
@@ -586,121 +677,16 @@ Partial Class formEmployee
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(23, 20)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(79, 21)
+        Me.Label10.Size = New System.Drawing.Size(59, 21)
         Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Matricule"
+        Me.Label10.Text = "Search"
         '
-        'Ztel_sr
+        'Zsearch
         '
-        Me.Ztel_sr.Location = New System.Drawing.Point(415, 47)
-        Me.Ztel_sr.Name = "Ztel_sr"
-        Me.Ztel_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Ztel_sr.TabIndex = 2
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(23, 55)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(118, 21)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Nom / Prenom"
-        '
-        'Zvil_sr
-        '
-        Me.Zvil_sr.Location = New System.Drawing.Point(153, 82)
-        Me.Zvil_sr.Name = "Zvil_sr"
-        Me.Zvil_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Zvil_sr.TabIndex = 2
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(323, 20)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(74, 21)
-        Me.Label13.TabIndex = 1
-        Me.Label13.Text = "Fonction"
-        '
-        'Zadrs_rs
-        '
-        Me.Zadrs_rs.Location = New System.Drawing.Point(415, 82)
-        Me.Zadrs_rs.Name = "Zadrs_rs"
-        Me.Zadrs_rs.Size = New System.Drawing.Size(465, 29)
-        Me.Zadrs_rs.TabIndex = 2
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(323, 90)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(69, 21)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Adresse"
-        '
-        'Zfn_sr
-        '
-        Me.Zfn_sr.Location = New System.Drawing.Point(415, 12)
-        Me.Zfn_sr.Name = "Zfn_sr"
-        Me.Zfn_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Zfn_sr.TabIndex = 2
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(23, 90)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(41, 21)
-        Me.Label15.TabIndex = 1
-        Me.Label15.Text = "Ville"
-        '
-        'Znpr_sr
-        '
-        Me.Znpr_sr.Location = New System.Drawing.Point(153, 47)
-        Me.Znpr_sr.Name = "Znpr_sr"
-        Me.Znpr_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Znpr_sr.TabIndex = 2
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(322, 55)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(86, 21)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "Telephone"
-        '
-        'Zmat_sr
-        '
-        Me.Zmat_sr.Location = New System.Drawing.Point(153, 12)
-        Me.Zmat_sr.Name = "Zmat_sr"
-        Me.Zmat_sr.Size = New System.Drawing.Size(144, 29)
-        Me.Zmat_sr.TabIndex = 2
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(576, 20)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(138, 21)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Date d'embauche"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(576, 55)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(136, 21)
-        Me.Label18.TabIndex = 1
-        Me.Label18.Text = "Nombre d'enfant"
+        Me.Zsearch.Location = New System.Drawing.Point(88, 12)
+        Me.Zsearch.Name = "Zsearch"
+        Me.Zsearch.Size = New System.Drawing.Size(280, 29)
+        Me.Zsearch.TabIndex = 2
         '
         'Panel2
         '
@@ -760,6 +746,10 @@ Partial Class formEmployee
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Afficher un ou plusieurs employees"
         '
+        'EmployeTableAdapter
+        '
+        Me.EmployeTableAdapter.ClearBeforeFill = True
+        '
         'formEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -779,7 +769,11 @@ Partial Class formEmployee
         Me.TabConsulter.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.PanelGrid.ResumeLayout(False)
+        Me.PanelGrid.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeedbDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBoxes.ResumeLayout(False)
         Me.PanelBoxes.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -816,22 +810,8 @@ Partial Class formEmployee
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Znen_sr As TextBox
-    Friend WithEvents Zdem_sr As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Ztel_sr As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Zvil_sr As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Zadrs_rs As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Zfn_sr As TextBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Znpr_sr As TextBox
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Zmat_sr As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
+    Friend WithEvents Zsearch As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button7 As Button
     Friend WithEvents Bannuler_sr As Button
@@ -848,14 +828,40 @@ Partial Class formEmployee
     Friend WithEvents Zemail As TextBox
     Friend WithEvents Label25 As Label
     Friend WithEvents PanelBoxes As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Cmat As DataGridViewTextBoxColumn
-    Friend WithEvents Cnpr As DataGridViewTextBoxColumn
-    Friend WithEvents Cfn As DataGridViewTextBoxColumn
-    Friend WithEvents Cadrs As DataGridViewTextBoxColumn
-    Friend WithEvents Cvil As DataGridViewTextBoxColumn
-    Friend WithEvents Ctel As DataGridViewTextBoxColumn
-    Friend WithEvents Cdem As DataGridViewTextBoxColumn
-    Friend WithEvents Cnen As DataGridViewTextBoxColumn
     Friend WithEvents PanelGrid As Panel
+    Friend WithEvents MatDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NomPrenomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FonctionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AdresseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents VilleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelephoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DEMDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EnfantsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PhotoDataGridViewImageColumn As DataGridViewImageColumn
+    Friend WithEvents CVDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DateRecDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents EmployeedbDataSetBindingSource As BindingSource
+    Friend WithEvents Employee_dbDataSet As employee_dbDataSet
+    Friend WithEvents EmployeBindingSource As BindingSource
+    Friend WithEvents EmployeTableAdapter As employee_dbDataSetTableAdapters.EmployeTableAdapter
+    Friend WithEvents BtableNext As Button
+    Friend WithEvents BtablePrev As Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents BtableLast As Button
+    Friend WithEvents BtableFirst As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents LrowsCount As Label
 End Class

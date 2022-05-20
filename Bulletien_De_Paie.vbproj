@@ -177,6 +177,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cnxdb.vb" />
+    <Compile Include="employee_dbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employee_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +205,12 @@
       <DependentUpon>formConge.vb</DependentUpon>
     </Compile>
     <Compile Include="formConge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEmployeDetails.Designer.vb">
+      <DependentUpon>formEmployeDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formEmployeDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formEmployee.Designer.vb">
@@ -247,6 +258,9 @@
     <EmbeddedResource Include="formConge.resx">
       <DependentUpon>formConge.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formEmployeDetails.resx">
+      <DependentUpon>formEmployeDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formEmployee.resx">
       <DependentUpon>formEmployee.vb</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +276,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="employee_dbDataSet.xsc">
+      <DependentUpon>employee_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="employee_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>employee_dbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="employee_dbDataSet.xss">
+      <DependentUpon>employee_dbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
 Public Class formEmployee
 
     Private Sub TabAjoute_Enter(sender As Object, e As EventArgs) Handles TabAjoute.Enter
@@ -82,44 +83,50 @@ Public Class formEmployee
 
 
     'Consulter Tab
-    Private Sub Brechercher_Click(sender As Object, e As EventArgs) Handles Brechercher.Click
-        cnx.Open()
-
-        If Zmat_sr.Text = "" Then
-            cmd = New OleDb.OleDbCommand("SELECT * FROM Employe WHERE Nom_Prenom = '" & Znpr_sr.Text.Replace("'", "''") & "'", cnx)
-
-        Else
-            cmd = New OleDb.OleDbCommand("SELECT * FROM Employe WHERE Mat = '" & Zmat_sr.Text & "'", cnx)
-        End If
-
-        Dim r As OleDbDataReader
-
-        r = cmd.ExecuteReader
-
-        r.Read()
-        If Not r.HasRows Then
-            MsgBox("No Employee trouve")
-        Else
-            Zmat_sr.Text = r("Mat")
-            Znpr_sr.Text = r("Nom_Prenom")
-            Zfn_sr.Text = r("Fonction")
-            Zadrs_rs.Text = r("Adresse")
-            Zvil_sr.Text = r("Ville")
-            Ztel_sr.Text = r("Telephone")
-            Zdem_sr.Text = r("DEM")
-            Znen_sr.Text = r("Enfants")
-        End If
+    Dim bs As New BindingSource()
+    Private Sub TabCunsulter_Paint(sender As Object, e As EventArgs) Handles TabAjoute.Paint
+        Dim dataAdapter As New OleDbDataAdapter("SELECT * from Employe", cnx)
+        Dim ds As New DataSet()
+        Dim dsView As New DataView
+        dataAdapter.Fill(ds, "Employe")
         cnx.Close()
+        dsView = ds.Tables(0).DefaultView
+        bs.DataSource = dsView
+        Me.DataGridView1.DataSource = bs
+
+        LrowsCount.Text = DataGridView1.Rows.Count - 1
     End Sub
 
-    Private Sub Bannuler_sr_Click(sender As Object, e As EventArgs) Handles Bannuler_sr.Click
-        Zmat_sr.Clear()
-        Znpr_sr.Clear()
-        Zfn_sr.Clear()
-        Zadrs_rs.Clear()
-        Zvil_sr.Clear()
-        Ztel_sr.Clear()
-        Zdem_sr.Clear()
-        Znen_sr.Clear()
+    Private Sub Zsearch_TextChanged(sender As Object, e As EventArgs) Handles Zsearch.TextChanged
+
+        bs.Filter = " Mat LIKE '" & Zsearch.Text & "' or Nom_Prenom LIKE '" & Zsearch.Text & "*' or Fonction LIKE '" & Zsearch.Text & "*' or Adresse LIKE '" & Zsearch.Text & "*' or Ville LIKE '" & Zsearch.Text & "*'  or Email LIKE '" & Zsearch.Text & "*'  or Telephone LIKE '" & Zsearch.Text & "*' "
+        'Me.DataGridView1.DataSource = bs
+        LrowsCount.Text = DataGridView1.Rows.Count - 1
     End Sub
+
+    Private Sub BtableNext_Click(sender As Object, e As EventArgs) Handles BtableNext.Click
+        bs.MoveNext()
+    End Sub
+
+    Private Sub BtableLast_Click(sender As Object, e As EventArgs) Handles BtableLast.Click
+        bs.MoveLast()
+    End Sub
+
+    Private Sub BtablePrev_Click(sender As Object, e As EventArgs) Handles BtablePrev.Click
+        bs.MovePrevious()
+    End Sub
+
+    Private Sub BtableFirst_Click(sender As Object, e As EventArgs) Handles BtableFirst.Click
+        bs.MoveFirst()
+    End Sub
+
+    'Show employe details
+    Private Sub DataGridView1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
+        If e.RowIndex >= 0 Then
+            selectedrow = DataGridView1.Rows(e.RowIndex)
+            formEmployeDetails.ShowDialog()
+        End If
+    End Sub
+    Public Shared Property selectedrow As DataGridViewRow
+
 End Class
