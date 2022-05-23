@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
-Imports System.IO
-Public Class formEmployee
+'Imports System.IO
+Public Class formEmploye2
 
     Private Sub TabAjoute_Enter(sender As Object, e As EventArgs) Handles TabAjoute.Enter
         Try
@@ -31,7 +31,7 @@ Public Class formEmployee
         Else
             strId = CType(maxId.Remove(0, 1), String)
             initId = CType(strId, String)
-            initId = initId + 1
+            initId += 1
             Zmat.Enabled = False
         End If
         Zmat.Text = "E" & initId.ToString()
@@ -129,4 +129,14 @@ Public Class formEmployee
         End If
     End Sub
     Public Shared Property selectedrow As DataGridViewRow
+
+    Private Sub PanelMain_Paint(sender As Object, e As PaintEventArgs) Handles PanelMain.Paint
+
+    End Sub
+
+    Private Sub formEmploye2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Employee_dbDataSet.Employe' table. You can move, or remove it, as needed.
+        Me.EmployeTableAdapter.Fill(Me.Employee_dbDataSet.Employe)
+
+    End Sub
 End Class

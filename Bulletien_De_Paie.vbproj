@@ -207,6 +207,12 @@
     <Compile Include="formConge.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formEmploye2.Designer.vb">
+      <DependentUpon>formEmploye2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formEmploye2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formEmployeDetails.Designer.vb">
       <DependentUpon>formEmployeDetails.vb</DependentUpon>
     </Compile>
@@ -225,6 +231,7 @@
     <Compile Include="formStats.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers.vb" />
     <Compile Include="MTabControl.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -257,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formConge.resx">
       <DependentUpon>formConge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEmploye2.resx">
+      <DependentUpon>formEmploye2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formEmployeDetails.resx">
       <DependentUpon>formEmployeDetails.vb</DependentUpon>

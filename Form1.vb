@@ -50,7 +50,7 @@
 
     Private Sub change_menu(menu As String)
         Dim Accueil As New formAccueil
-        Dim Employee As New formEmployee
+        Dim Employee As New formEmploye2
         Dim Bulletien As New formBulletien
         Dim Conge As New formConge
         Dim Stats As New formStats

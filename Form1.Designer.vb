@@ -75,7 +75,7 @@ Partial Class Form1
         Me.Bst.FlatAppearance.BorderSize = 0
         Me.Bst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bst.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bst.ForeColor = System.Drawing.Color.White
+        Me.Bst.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Bst.Location = New System.Drawing.Point(3, 283)
         Me.Bst.Name = "Bst"
         Me.Bst.Size = New System.Drawing.Size(170, 70)
@@ -89,7 +89,7 @@ Partial Class Form1
         Me.Bco.FlatAppearance.BorderSize = 0
         Me.Bco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bco.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bco.ForeColor = System.Drawing.Color.White
+        Me.Bco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Bco.Location = New System.Drawing.Point(1, 213)
         Me.Bco.Name = "Bco"
         Me.Bco.Size = New System.Drawing.Size(170, 70)
@@ -103,7 +103,7 @@ Partial Class Form1
         Me.Bem.FlatAppearance.BorderSize = 0
         Me.Bem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bem.ForeColor = System.Drawing.Color.White
+        Me.Bem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Bem.Location = New System.Drawing.Point(0, 73)
         Me.Bem.Name = "Bem"
         Me.Bem.Size = New System.Drawing.Size(170, 70)
@@ -117,7 +117,7 @@ Partial Class Form1
         Me.Bbu.FlatAppearance.BorderSize = 0
         Me.Bbu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bbu.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bbu.ForeColor = System.Drawing.Color.White
+        Me.Bbu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Bbu.Location = New System.Drawing.Point(0, 143)
         Me.Bbu.Name = "Bbu"
         Me.Bbu.Size = New System.Drawing.Size(170, 70)
@@ -131,7 +131,7 @@ Partial Class Form1
         Me.Bac.FlatAppearance.BorderSize = 0
         Me.Bac.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bac.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bac.ForeColor = System.Drawing.Color.White
+        Me.Bac.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Bac.Location = New System.Drawing.Point(-1, 3)
         Me.Bac.Name = "Bac"
         Me.Bac.Size = New System.Drawing.Size(170, 70)
