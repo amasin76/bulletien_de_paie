@@ -43,19 +43,20 @@ Partial Class formBulletien
         Me.Zsbr = New System.Windows.Forms.TextBox()
         Me.zhsTotal = New System.Windows.Forms.TextBox()
         Me.Znen = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Lseniority = New System.Windows.Forms.Label()
         Me.Zseniority = New System.Windows.Forms.TextBox()
         Me.Zhs100 = New System.Windows.Forms.TextBox()
         Me.Zsba = New System.Windows.Forms.TextBox()
         Me.Zhs50 = New System.Windows.Forms.TextBox()
         Me.Zth = New System.Windows.Forms.TextBox()
+        Me.Zyear = New System.Windows.Forms.TextBox()
         Me.Zhs25 = New System.Windows.Forms.TextBox()
         Me.Zht = New System.Windows.Forms.TextBox()
         Me.Zcode = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Lnen = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -71,7 +72,6 @@ Partial Class formBulletien
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Zmat = New System.Windows.Forms.TextBox()
         Me.TabConsulter = New System.Windows.Forms.TabPage()
-        Me.Zyear = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -256,7 +256,7 @@ Partial Class formBulletien
         Me.GroupBox1.Controls.Add(Me.Zsbr)
         Me.GroupBox1.Controls.Add(Me.zhsTotal)
         Me.GroupBox1.Controls.Add(Me.Znen)
-        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.Lseniority)
         Me.GroupBox1.Controls.Add(Me.Zseniority)
         Me.GroupBox1.Controls.Add(Me.Zhs100)
         Me.GroupBox1.Controls.Add(Me.Zsba)
@@ -269,7 +269,7 @@ Partial Class formBulletien
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Lnen)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -322,15 +322,15 @@ Partial Class formBulletien
         Me.Znen.Size = New System.Drawing.Size(138, 25)
         Me.Znen.TabIndex = 1
         '
-        'Label17
+        'Lseniority
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(396, 211)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(76, 17)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Ancienneté"
+        Me.Lseniority.AutoSize = True
+        Me.Lseniority.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lseniority.Location = New System.Drawing.Point(396, 211)
+        Me.Lseniority.Name = "Lseniority"
+        Me.Lseniority.Size = New System.Drawing.Size(115, 17)
+        Me.Lseniority.TabIndex = 0
+        Me.Lseniority.Text = "Prime Ancienneté"
         '
         'Zseniority
         '
@@ -373,6 +373,14 @@ Partial Class formBulletien
         Me.Zth.Name = "Zth"
         Me.Zth.Size = New System.Drawing.Size(138, 25)
         Me.Zth.TabIndex = 1
+        '
+        'Zyear
+        '
+        Me.Zyear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zyear.Location = New System.Drawing.Point(136, 115)
+        Me.Zyear.Name = "Zyear"
+        Me.Zyear.Size = New System.Drawing.Size(138, 25)
+        Me.Zyear.TabIndex = 1
         '
         'Zhs25
         '
@@ -429,15 +437,15 @@ Partial Class formBulletien
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Montant Total H.SUP"
         '
-        'Label6
+        'Lnen
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 242)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 17)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Nombre d'enfant"
+        Me.Lnen.AutoSize = True
+        Me.Lnen.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lnen.Location = New System.Drawing.Point(13, 242)
+        Me.Lnen.Name = "Lnen"
+        Me.Lnen.Size = New System.Drawing.Size(92, 17)
+        Me.Lnen.TabIndex = 0
+        Me.Lnen.Text = "Prime Enfants"
         '
         'Label1
         '
@@ -585,14 +593,6 @@ Partial Class formBulletien
         Me.TabConsulter.Text = "Consulter"
         Me.TabConsulter.UseVisualStyleBackColor = True
         '
-        'Zyear
-        '
-        Me.Zyear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zyear.Location = New System.Drawing.Point(136, 115)
-        Me.Zyear.Name = "Zyear"
-        Me.Zyear.Size = New System.Drawing.Size(138, 25)
-        Me.Zyear.TabIndex = 1
-        '
         'formBulletien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -640,7 +640,7 @@ Partial Class formBulletien
     Friend WithEvents Label12 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Lnen As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label9 As Label
@@ -655,7 +655,7 @@ Partial Class formBulletien
     Friend WithEvents Label15 As Label
     Friend WithEvents PanelTitle As Panel
     Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents Lseniority As Label
     Friend WithEvents Zseniority As TextBox
     Friend WithEvents Znet As TextBox
     Friend WithEvents Label20 As Label

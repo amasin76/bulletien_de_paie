@@ -40,6 +40,9 @@ Public Class formBulletien
         Zyear.SelectedText = Date.Now.Year
     End Sub
 
+
+    Dim vAnc As Integer
+    Dim vEnf As Integer
     Private Sub Znpr_TextChanged(sender As Object, e As EventArgs) Handles Znpr.TextChanged
         qry = "SELECT Mat, Nom_Prenom, Fonction, DEM, Enfants FROM Employe WHERE Nom_Prenom = @npr "
         cmd = New OleDbCommand(qry, cnx)
@@ -49,17 +52,49 @@ Public Class formBulletien
         If dr.Read Then
             Zmat.Text = dr("Mat")
             Zfn.Text = dr("Fonction")
-            Znen.Text = dr("Enfants")
-            Zseniority.Text = Date.Now.Year - Convert.ToDateTime(dr("DEM")).ToString("yyyy")
+            vEnf = dr("Enfants")
+            vAnc = Date.Now.Year - Convert.ToDateTime(dr("DEM")).ToString("yyyy")
         End If
         Zmat.Enabled = False
+        Znen.Text = vEnf
+        Zseniority.Text = vAnc
     End Sub
 
-    Private Sub Zfn_TextChanged(sender As Object, e As EventArgs) Handles Zfn.TextChanged
-        Console.WriteLine("BIO")
+    Private Sub Zht_th_TextChanged(sender As Object, e As EventArgs) Handles Zht.TextChanged, Zth.TextChanged
+        Dim vHt, vTh, calc As Integer
+        vHt = Val(Zht.Text)
+        vTh = Val(Zth.Text)
+        calc = vHt * vTh
+        Zsba.Text = calc
     End Sub
 
-    Private Sub Zth_TextChanged(sender As Object, e As EventArgs) Handles Zth.TextChanged
+    Private Sub Zhs25_50_100_TextChanged(sender As Object, e As EventArgs) Handles Zhs25.TextChanged, Zhs50.TextChanged, Zhs100.TextChanged
+        Dim v25, v50, v100, vTh, calc As Integer
+        v25 = Val(Zhs25.Text)
+        v50 = Val(Zhs50.Text)
+        v100 = Val(Zhs100.Text)
+        vTh = Val(Zth.Text)
+        calc = vTh * (v25 * 1.25 + v50 * 1.5 + v100 * 2)
+        zhsTotal.Text = calc
+    End Sub
 
+    Private Sub Zsba_TextChanged(sender As Object, e As EventArgs) Handles Zsba.TextChanged
+        Dim vSba, vTaux, calc As Single
+        vSba = Val(Zsba.Text)
+        vTaux = primeAnc(vAnc)
+        calc = vSba * vTaux
+        Zseniority.Text = calc
+
+        Znen.Text = Helpers.primeEnf(vEnf)
+    End Sub
+
+    Private Sub Zsba_HS_Primes_TextChanged(sender As Object, e As EventArgs) Handles Zsba.TextChanged, zhsTotal.TextChanged, Znen.TextChanged 'Zseniority.TextChanged
+        Dim vSba, vHS, vEnf1, vAnc1, calc As Single
+        vSba = Val(Zsba.Text)
+        vHS = Val(zhsTotal.Text)
+        vEnf1 = Val(Znen.Text)
+        vAnc1 = Val(Zseniority.Text)
+        calc = vSba + vHS + vEnf1 + vAnc1
+        Zsbr.Text = calc
     End Sub
 End Class

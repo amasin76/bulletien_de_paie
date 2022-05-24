@@ -1,13 +1,13 @@
 ﻿Module Helpers
-    Public Function primeAnc(ByVal x As Integer) As Integer
-        Dim t As Integer
-        If x >= 2 Then
+    Public Function primeAnc(ByVal x As Integer) As Single
+        Dim t As Single
+        If x <= 2 Then
             t = 0.05
-        ElseIf x >= 5 Then
+        ElseIf x <= 5 Then
             t = 0.1
-        ElseIf x >= 5 Then
+        ElseIf x <= 12 Then
             t = 0.15
-        ElseIf x >= 5 Then
+        ElseIf x >= 20 Then
             t = 0.2
         End If
 
@@ -25,8 +25,8 @@
 
         Return t
     End Function
-    Public Function primeEnf(ByVal x As Integer) As Integer
-        Dim t As Integer
+    Public Function primeEnf(ByVal x As Integer) As Single
+        Dim t As Single
         If x <= 3 Then
             t = x * 300
         ElseIf x <= 6 Then
